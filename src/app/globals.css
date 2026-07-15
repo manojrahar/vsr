@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050a19;
+  --foreground: #f3f4f6;
+  --secondary: #0b1226;
+  --card: #111827;
+  --accent: #ff5a00;
+  
+  /* Vibrant Orange-Red Gradient Pop Colors */
+  --pop-neon-orange: #ff5a00;
+  --pop-neon-red: #ff2400;
+  --pop-gradient: linear-gradient(135deg, #ff5a00 0%, #ff2400 100%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-secondary-bg: var(--secondary);
+  --color-card-bg: var(--card);
+  --color-accent: var(--accent);
+  --color-neon-orange: var(--pop-neon-orange);
+  --color-neon-red: var(--pop-neon-red);
+  --font-sans: var(--font-outfit), var(--font-inter), ui-sans-serif, system-ui;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Hide Scrollbars visually for all elements while maintaining scroll capability */
+* {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Ambient background glows using the orange-red palette */
+.ambient-glow {
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 90, 0, 0.12) 0%, rgba(255, 36, 0, 0.03) 50%, rgba(0, 0, 0, 0) 100%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-2 {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 36, 0, 0.08) 0%, rgba(255, 90, 0, 0.02) 60%, rgba(0, 0, 0, 0) 100%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Interactive cursor glow tracking class */
+.cursor-glow-element {
+  background: radial-gradient(
+    600px circle at var(--x, 0px) var(--y, 0px),
+    rgba(255, 90, 0, 0.04),
+    rgba(255, 36, 0, 0.02),
+    transparent 40%
+  );
+}
+
+/* Neon text & border highlight utility classes */
+.text-neon-glow-orange {
+  text-shadow: 0 0 10px rgba(255, 90, 0, 0.6), 0 0 20px rgba(255, 36, 0, 0.3), 0 0 30px rgba(255, 90, 0, 0.1);
+}
+
+.text-neon-glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.border-neon-orange-glow:hover {
+  border-color: var(--pop-neon-orange);
+  box-shadow: 0 0 15px rgba(255, 90, 0, 0.25);
+}
+
+/* Sci-fi laser border beam sweep animation */
+.border-beam {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid transparent;
+  border-radius: 16px;
+  background: linear-gradient(90deg, transparent, var(--pop-neon-orange), #6366f1, transparent) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  background-size: 200% 100%;
+  animation: border-beam-anim 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.group:hover .border-beam {
+  opacity: 1;
+}
+
+@keyframes border-beam-anim {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Retro CRT / Hologram Scanlines Effect */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 90, 0, 0.05),
+    rgba(0, 255, 244, 0.03),
+    rgba(99, 102, 241, 0.05)
+  );
+  background-size: 100% 4px, 6px 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 15;
+  animation: scanline-flicker 0.15s infinite;
+}
+
+.group:hover .scanlines {
+  opacity: 0.55;
+}
+
+@keyframes scanline-flicker {
+  0% { opacity: 0.53; }
+  50% { opacity: 0.57; }
+  100% { opacity: 0.53; }
+}
+
+/* Pulsing cyber-grid animation on background */
+.cyber-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 90, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 90, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 80%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Global Hologram Card Effects using pseudo-elements */
+.hologram-card {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* 1. Laser Border Beam on hover */
+.hologram-card::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border: 1.5px solid transparent !important;
+  border-radius: inherit !important;
+  background: linear-gradient(90deg, transparent, var(--pop-neon-orange), #6366f1, transparent) border-box !important;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0) !important;
+  -webkit-mask-composite: destination-out !important;
+  mask-composite: exclude !important;
+  background-size: 200% 100% !important;
+  animation: border-beam-anim 4s linear infinite !important;
+  opacity: 0 !important;
+  transition: opacity 0.4s ease-in-out !important;
+  pointer-events: none !important;
+  z-index: 30 !important;
+}
+
+.hologram-card:hover::before {
+  opacity: 1 !important;
+}
+
+/* 2. CRT Scanline Overlay on hover */
+.hologram-card::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.3) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 90, 0, 0.04),
+    rgba(0, 255, 244, 0.02),
+    rgba(99, 102, 241, 0.04)
+  ) !important;
+  background-size: 100% 4px, 6px 100% !important;
+  opacity: 0 !important;
+  transition: opacity 0.4s ease !important;
+  pointer-events: none !important;
+  z-index: 15 !important;
+  animation: scanline-flicker 0.15s infinite !important;
+}
+
+.hologram-card:hover::after {
+  opacity: 0.45 !important;
+}
