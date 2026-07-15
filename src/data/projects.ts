@@ -261,7 +261,7 @@ export const projectsData: Project[] = [
     genre: "Educational",
     engine: "Unity 2022.3 LTS (URP)",
     technologies: ["C#", "Unity 2D/3D Hybrid Engine", "Text-to-Speech Vocal API", "Vector Line Tracing Engine", "LootLocker SDK Integrations"],
-    
+
     features: [
       "Interactive spelling quizzes with dynamic dino reactions and animations.",
       "Letter tracing engine using smooth bezier curve drawing algorithms.",
@@ -302,7 +302,7 @@ export const projectsData: Project[] = [
     genre: "Puzzle",
     engine: "Unity 2022.3 LTS (URP)",
     technologies: ["C#", "Unity UI Toolkit", "Procedural Grid Generator", "Dynamic Layout State System", "FMOD Audio Elements"],
-    
+
     features: [
       "Grid matching card layouts scaling dynamically from 3x3 to 8x8 configurations.",
       "Satisfying tile rotation and flip physics with procedural rotation sweeps.",
@@ -380,7 +380,7 @@ export const projectsData: Project[] = [
     genre: "Simulation",
     engine: "Unity 2022.3 LTS (URP)",
     technologies: ["C#", "Destructible Grid Shader", "Volumetric Brushing physics", "Dynamic Heightmap Painters", "Progressive Saving API"],
-    
+
     features: [
       "Realistic soil-brushing mechanics using custom pixel-displacement algorithms.",
       "Multi-layered tile structures (sand, dirt, clay, hard stone) requiring distinct tool inputs.",
@@ -413,7 +413,7 @@ export const projectsData: Project[] = [
       "/images/DinoBuilder-7.webp"
     ],
     webglUrl: "/games/DinoParkBuilder/index.html",
-    
+
     platform: ["Kids", "2D"],
     genre: "Simulation",
     engine: "Unity 2022.3 LTS (URP)",
@@ -502,5 +502,64 @@ export const projectsData: Project[] = [
     duration: "2 Months",
     problem: "Calculating real-time color splats and texture filling on complex animal models causes dynamic memory allocation spikes.",
     solution: "We implemented pre-compiled mask textures and offloaded color fills to a simple threshold fragment shader, avoiding run-time texture modifications entirely."
+  },
+  {
+    id: "14",
+    title: "ShadowX: Ninja Bamboo Escape",
+    slug: "shadowx-ninja-bamboo-escape",
+    description:
+      "A fast-paced endless action runner where a skilled ninja races across bamboo branches, dodging deadly spider enemies and overcoming increasingly challenging obstacles with precise timing and quick reflexes.",
+
+    thumbnail: "/images/ShadowX-Thumbnail.webp",
+    banner: "/images/ShadowX-Banner.webp",
+    galleryBanner: "/images/ShadowX-Gallery-Banner.webp",
+
+    gallery: [
+      "/images/ShadowX-1.webp",
+      "/images/ShadowX-2.webp",
+      "/images/ShadowX-3.webp",
+      "/images/ShadowX-4.webp",
+      "/images/ShadowX-5.webp",
+      "/images/ShadowX-6.webp"
+    ],
+
+    webglUrl: "/games/ShadowX/index.html",
+
+    platform: ["Mobile", "WebGL"],
+    genre: "Action",
+    engine: "Unity 2022.3 LTS (URP)",
+
+    technologies: [
+      "C#",
+      "Unity Character Controller",
+      "Cinemachine",
+      "Unity Input System",
+      "Custom Obstacle Spawner",
+      "Mobile Touch Controls"
+    ],
+
+    features: [
+      "Fast-paced endless ninja runner with responsive touch and keyboard controls.",
+      "Dynamic bamboo branch environments with progressively increasing difficulty.",
+      "Spider enemies requiring quick reflexes, precise movement, and perfect timing.",
+      "Smooth character animations, visual effects, and satisfying gameplay feedback.",
+      "Optimized for both Mobile and WebGL with stable performance."
+    ],
+
+    responsibilities: [
+      "Developed the core player movement, jumping, and dodge mechanics.",
+      "Designed the obstacle spawning and difficulty progression systems.",
+      "Integrated responsive character animations and Cinemachine camera behaviors.",
+      "Optimized gameplay performance and input responsiveness for Mobile and WebGL.",
+      "Implemented scoring, game state management, and restart functionality."
+    ],
+
+    duration: "2 Months",
+
+    problem:
+      "Building an engaging endless runner requires highly responsive controls, accurate collision detection, and balanced obstacle generation. Maintaining smooth gameplay while spawning enemies dynamically across narrow bamboo paths presented a significant challenge on lower-end mobile devices.",
+
+    solution:
+      "We implemented an optimized character controller with efficient collision handling, lightweight obstacle pooling, and dynamic difficulty scaling. This ensured fluid movement, responsive dodging, and consistent performance across both Mobile and WebGL platforms."
   }
 ];
