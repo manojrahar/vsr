@@ -285,12 +285,7 @@ export default function Home() {
                     <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto font-light">
                       Interested in high performance systems, responsive gameplay mechanics, or low-latency multiplayer setups? Let's connect and discuss your team's objectives.
                     </p>
-                    <button
-                      onClick={() => window.location.href = "mailto:vishambhar.ranawat@gmail.com"}
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/15 hover:shadow-indigo-600/30 transition-all cursor-pointer"
-                    >
-                      Get in Touch
-                    </button>
+
                   </div>
                 </section>
               </div>
