@@ -41,13 +41,13 @@ export const projectsData: Project[] = [
     webglUrl: "/games/Bounzy/index.html",
     platform: ["3D", "Casual"],
     genre: "Casual",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Unity Physics 3D", "Cinemachine", "Google Play Services SDK", "Unity Input System", "Custom Shader Graph"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Unity Physics 3D", "Cinemachine", "Google Play Services SDK", "Unity Input System", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Custom bouncing physics model finely tuned for mobile touchscreen swipes and keyboards.",
       "Procedurally generated helix tower levels with progressive difficulty scaling.",
       "Stunning visual feedback loop including character impact squashes, splash particles, and screen shakes.",
-      "Global online highscore leaderboards using LootLocker backend integrations."
+      "Global online highscore leaderboards using Playfab backend integrations."
     ],
     responsibilities: [
       "Designed and coded the core swipe-to-rotate input and segment collision checking algorithms.",
@@ -80,8 +80,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/StackBallNeo/index.html",
     platform: ["3D", "Casual"],
     genre: "Casual",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Unity 3D Engine", "Post Processing Stack", "Google Play Games Services", "Custom Particle Systems", "Mesh Deformer API"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Unity 3D Engine", "Post Processing Stack", "Google Play Games Services", "Custom Particle Systems", "Mesh Deformer API", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Dynamic stack destruction physics yielding satisfying visual platform fragmentation.",
       "Multiplier streak and fire-blast invincible states that let players crash through all segments.",
@@ -116,8 +116,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/Fluxy/index.html",
     platform: ["2D", "Endless", "Casual"],
     genre: "Casual",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Fluid Simulation API", "Vector Field Shaders", "Custom Color Blending Engine", "Unity UI Toolkit", "Mesh Deformer API"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Vector Field Shaders", "Custom Color Blending Engine", "Unity UI Toolkit", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Advanced 2D/2.5D fluid flow simulation with realistic viscosity and mixing physics.",
       "Procedurally generated piping grid levels with dynamic valves, gates, and teleporters.",
@@ -151,8 +151,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/HamJam - Endless Runner/index.html",
     platform: ["3D", "Endless", "Casual"],
     genre: "Casual",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Unity 3D Engine", "Procedural Level Spawner", "Object Pooling System", "Cinemachine", "Google Play Services SDK"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Unity 3D Engine", "Procedural Level Spawner", "Object Pooling System", "Cinemachine", "Google Play Services SDK", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Procedurally generated 3D environments with dynamic obstacle and item spawning.",
       "Highly responsive swipe-to-dodge and jump controls tuned for mobile touchscreens.",
@@ -188,8 +188,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/JetX- Rule The Skies/index.html",
     platform: ["3D", "Endless", "Casual", "Action"],
     genre: "Casual",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Unity URP", "Post-Processing Volume", "Cinemachine Shake API", "Dynamic Velocity Physics", "Custom Particle Trail Shader"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Unity URP", "Post-Processing Volume", "Cinemachine Shake API", "Dynamic Velocity Physics", "Custom Particle Trail Shader", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Immersive jet flight model with dynamic speed thrust and banking mechanics.",
       "High-performance post-processing effects including motion blur and bloom shader volumes.",
@@ -224,8 +224,8 @@ export const projectsData: Project[] = [
     ],
     platform: ["3D", "Action"],
     genre: "Strategy",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Unity 3D Engine", "AI Auto-Combat Pathfinding", "Dynamic Drafting Deck Engine", "LootLocker SDK Backend", "Multiplayer Server Netcode"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Unity 3D Engine", "AI Auto-Combat Pathfinding", "Dynamic Drafting Deck Engine", "PlayFab Backend", "Multiplayer Server Netcode", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Real-time card drafting mechanic with dynamic card options and comeback balancing.",
       "Grid-based tactical placement system with automatic battle execution.",
@@ -259,8 +259,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/JurassicLetters/index.html",
     platform: ["Kids", "2D"],
     genre: "Educational",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Unity 2D/3D Hybrid Engine", "Text-to-Speech Vocal API", "Vector Line Tracing Engine", "LootLocker SDK Integrations"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Unity 2D/3D Hybrid Engine", "Text-to-Speech Vocal API", "Vector Line Tracing Engine", "PlayFab Integrations", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
 
     features: [
       "Interactive spelling quizzes with dynamic dino reactions and animations.",
@@ -300,8 +300,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/FossileMemory/index.html",
     platform: ["Kids", "2D"],
     genre: "Puzzle",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Unity UI Toolkit", "Procedural Grid Generator", "Dynamic Layout State System", "FMOD Audio Elements"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Unity UI Toolkit", "Procedural Grid Generator", "Dynamic Layout State System", "FMOD Audio Elements", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
 
     features: [
       "Grid matching card layouts scaling dynamically from 3x3 to 8x8 configurations.",
@@ -340,8 +340,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/RunWithVelociraptor/index.html",
     platform: ["Kids", "2D"],
     genre: "Kids",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Dynamic Vertex-Color Shaders", "Procedural Track Generator", "Cinemachine Dynamic Cameras", "FMOD Volumetric Audio Engine"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Dynamic Vertex-Color Shaders", "Procedural Track Generator", "Cinemachine Dynamic Cameras", "FMOD Volumetric Audio Engine", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Endless procedural jungle tracks that scale difficulty based on speed multipliers.",
       "High-speed dodging, sliding, and double-jumping mechanics with responsive touch swipes.",
@@ -378,8 +378,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/MysteriousExcavation/index.html",
     platform: ["Kids", "2D"],
     genre: "Simulation",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Destructible Grid Shader", "Volumetric Brushing physics", "Dynamic Heightmap Painters", "Progressive Saving API"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Destructible Grid Shader", "Volumetric Brushing physics", "Dynamic Heightmap Painters", "Progressive Saving API", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
 
     features: [
       "Realistic soil-brushing mechanics using custom pixel-displacement algorithms.",
@@ -416,8 +416,8 @@ export const projectsData: Project[] = [
 
     platform: ["Kids", "2D"],
     genre: "Simulation",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Isometric Grid Building Engine", "Economic Simulator System", "Flow-Field Pathfinding", "Custom Canvas HUDs"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Isometric Grid Building Engine", "Economic Simulator System", "Flow-Field Pathfinding", "Custom Canvas HUDs", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Isometric park construction with dynamic road grids and electrical grids.",
       "Real-time visitors AI reacting to dinosaur counts, food vendor spots, and safety breakouts.",
@@ -450,8 +450,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/CamouflageChallenge/index.html",
     platform: ["Kids", "2D"],
     genre: "Puzzle",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Multi-Texture Blending Shaders", "Procedural Level Configurator", "Zoom-in Canvas Systems"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Multi-Texture Blending Shaders", "Procedural Level Configurator", "Zoom-in Canvas Systems", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Hundreds of seek levels across prehistoric valleys, volcanoes, and dark cave maps.",
       "Custom shaders that blend dinosaur colors with forest lighting dynamically.",
@@ -487,8 +487,8 @@ export const projectsData: Project[] = [
     webglUrl: "/games/Jungle&Color/index.html",
     platform: ["Kids", "2D"],
     genre: "Educational",
-    engine: "Unity 2022.3 LTS (URP)",
-    technologies: ["C#", "Mask Threshold Shaders", "Fluid Paint Spreader System", "Color Mixer Matrix Calculations"],
+    engine: "Unity 6000.0.68f1 LTS (URP)",
+    technologies: ["C#", "Mask Threshold Shaders", "Fluid Paint Spreader System", "Color Mixer Matrix Calculations", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"],
     features: [
       "Interactive color-mixing wheel teaching primary, secondary, and tertiary mixes.",
       "Splatter paint mechanics with dynamic particles spreading on canvas clicks.",
@@ -503,63 +503,63 @@ export const projectsData: Project[] = [
     problem: "Calculating real-time color splats and texture filling on complex animal models causes dynamic memory allocation spikes.",
     solution: "We implemented pre-compiled mask textures and offloaded color fills to a simple threshold fragment shader, avoiding run-time texture modifications entirely."
   },
-  {
-    id: "14",
-    title: "ShadowX: Ninja Bamboo Escape",
-    slug: "shadowx-ninja-bamboo-escape",
-    description:
-      "A fast-paced endless action runner where a skilled ninja races across bamboo branches, dodging deadly spider enemies and overcoming increasingly challenging obstacles with precise timing and quick reflexes.",
+  // {
+  //   id: "14",
+  //   title: "ShadowX: Slash And Survive",
+  //   slug: "shadowx-slash-and-survive",
+  //   description:
+  //     "A fast-paced endless action runner where a skilled ninja races across bamboo branches, dodging deadly spider enemies and overcoming increasingly challenging obstacles with precise timing and quick reflexes.",
 
-    thumbnail: "/images/ShadowX-Thumbnail.webp",
-    banner: "/images/ShadowX-Banner.webp",
-    galleryBanner: "/images/ShadowX-Gallery-Banner.webp",
+  //   thumbnail: "/images/ShadowX-Thumbnail.png",
+  //   banner: "/images/ShadowX-Banner.png",
+  //   galleryBanner: "/images/ShadowX-Gallery-Banner.png",
 
-    gallery: [
-      "/images/ShadowX-1.webp",
-      "/images/ShadowX-2.webp",
-      "/images/ShadowX-3.webp",
-      "/images/ShadowX-4.webp",
-      "/images/ShadowX-5.webp",
-      "/images/ShadowX-6.webp"
-    ],
+  //   gallery: [
+  //     "/images/ShadowX-1.webp",
+  //     "/images/ShadowX-2.webp",
+  //     "/images/ShadowX-3.webp",
+  //     "/images/ShadowX-4.webp",
+  //     "/images/ShadowX-5.webp",
+  //     "/images/ShadowX-6.webp"
+  //   ],
 
-    webglUrl: "/games/ShadowX/index.html",
+  //   webglUrl: "/games/ShadowX-SlashAndSurvive/index.html",
 
-    platform: ["Mobile", "WebGL"],
-    genre: "Action",
-    engine: "Unity 2022.3 LTS (URP)",
+  //   platform: ["Mobile", "WebGL"],
+  //   genre: "Action",
+  //   engine: "Unity 6000.0.68f1 LTS (URP)",
 
-    technologies: [
-      "C#",
-      "Unity Character Controller",
-      "Cinemachine",
-      "Unity Input System",
-      "Custom Obstacle Spawner",
-      "Mobile Touch Controls"
-    ],
+  //   technologies: [
+  //     "C#",
+  //     "Unity Character Controller",
+  //     "Cinemachine",
+  //     "Unity Input System",
+  //     "Custom Obstacle Spawner",
+  //     "Mobile Touch Controls", "Admob SDK", "Unity Ads SDK", "Unity Analytics", "In App Purchase SDK"
+  //   ],
 
-    features: [
-      "Fast-paced endless ninja runner with responsive touch and keyboard controls.",
-      "Dynamic bamboo branch environments with progressively increasing difficulty.",
-      "Spider enemies requiring quick reflexes, precise movement, and perfect timing.",
-      "Smooth character animations, visual effects, and satisfying gameplay feedback.",
-      "Optimized for both Mobile and WebGL with stable performance."
-    ],
+  //   features: [
+  //     "Fast-paced endless ninja runner with responsive touch and keyboard controls.",
+  //     "Dynamic bamboo branch environments with progressively increasing difficulty.",
+  //     "Spider enemies requiring quick reflexes, precise movement, and perfect timing.",
+  //     "Smooth character animations, visual effects, and satisfying gameplay feedback.",
+  //     "Optimized for both Mobile and WebGL with stable performance."
+  //   ],
 
-    responsibilities: [
-      "Developed the core player movement, jumping, and dodge mechanics.",
-      "Designed the obstacle spawning and difficulty progression systems.",
-      "Integrated responsive character animations and Cinemachine camera behaviors.",
-      "Optimized gameplay performance and input responsiveness for Mobile and WebGL.",
-      "Implemented scoring, game state management, and restart functionality."
-    ],
+  //   responsibilities: [
+  //     "Developed the core player movement, jumping, and dodge mechanics.",
+  //     "Designed the obstacle spawning and difficulty progression systems.",
+  //     "Integrated responsive character animations and Cinemachine camera behaviors.",
+  //     "Optimized gameplay performance and input responsiveness for Mobile and WebGL.",
+  //     "Implemented scoring, game state management, and restart functionality."
+  //   ],
 
-    duration: "2 Months",
+  //   duration: "2 Months",
 
-    problem:
-      "Building an engaging endless runner requires highly responsive controls, accurate collision detection, and balanced obstacle generation. Maintaining smooth gameplay while spawning enemies dynamically across narrow bamboo paths presented a significant challenge on lower-end mobile devices.",
+  //   problem:
+  //     "Building an engaging endless runner requires highly responsive controls, accurate collision detection, and balanced obstacle generation. Maintaining smooth gameplay while spawning enemies dynamically across narrow bamboo paths presented a significant challenge on lower-end mobile devices.",
 
-    solution:
-      "We implemented an optimized character controller with efficient collision handling, lightweight obstacle pooling, and dynamic difficulty scaling. This ensured fluid movement, responsive dodging, and consistent performance across both Mobile and WebGL platforms."
-  }
+  //   solution:
+  //     "We implemented an optimized character controller with efficient collision handling, lightweight obstacle pooling, and dynamic difficulty scaling. This ensured fluid movement, responsive dodging, and consistent performance across both Mobile and WebGL platforms."
+  // }
 ];

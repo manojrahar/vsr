@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
   <title>Unity Web Player | StackBallNeo</title>
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <style>
-    html, body {
+    html,
+    body {
       padding: 0 !important;
       margin: 0 !important;
       width: 100% !important;
@@ -18,6 +22,7 @@
       background: #050A19 !important;
       font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     }
+
     #unity-container {
       width: 100% !important;
       height: 100% !important;
@@ -29,6 +34,7 @@
       background: #050A19 !important;
       transition: all 0.3s ease-in-out;
     }
+
     #unity-canvas {
       box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7) !important;
       background: #000 !important;
@@ -41,12 +47,14 @@
       height: 100% !important;
       z-index: 2;
     }
+
     @media (max-aspect-ratio: 9/16) {
       #unity-canvas {
         width: 100% !important;
         height: auto !important;
       }
     }
+
     #unity-canvas.landscape-mode {
       aspect-ratio: 9 / 16 !important;
       flex: 0 0 auto !important;
@@ -74,25 +82,29 @@
       overflow-y: auto;
       padding: 10px 0;
     }
+
     .left-column {
       margin-right: 48px;
     }
+
     .right-column {
       margin-left: 48px;
     }
-    
+
     /* Scrollbar for columns if they overflow */
     .game-details-column::-webkit-scrollbar {
       width: 4px;
     }
+
     .game-details-column::-webkit-scrollbar-track {
       background: transparent;
     }
+
     .game-details-column::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.1);
       border-radius: 2px;
     }
-    
+
     .info-card {
       padding: 24px;
       background: #0A122C !important;
@@ -104,11 +116,12 @@
       flex-direction: column;
       gap: 16px;
     }
-    
+
     /* Custom wrappers for bottom details layout */
     #gameplay-row {
       display: contents;
     }
+
     #details-row {
       display: none;
     }
@@ -122,6 +135,7 @@
       height: 100vh !important;
       gap: 12px !important;
     }
+
     #unity-container.landscape-mode #gameplay-row {
       display: flex !important;
       flex-direction: row !important;
@@ -132,6 +146,7 @@
       gap: 4px !important;
       flex-shrink: 0 !important;
     }
+
     #unity-container.landscape-mode #details-row {
       display: flex !important;
       flex-direction: row !important;
@@ -144,6 +159,7 @@
       margin-bottom: 12px !important;
       flex-shrink: 0 !important;
     }
+
     #unity-canvas.landscape-mode {
       aspect-ratio: 9 / 16 !important;
       flex: 1 1 auto !important;
@@ -155,6 +171,7 @@
       margin: 0 !important;
       order: 0 !important;
     }
+
     #unity-container.landscape-mode .game-details-column {
       display: flex !important;
       flex-direction: column !important;
@@ -164,14 +181,17 @@
       overflow-y: visible !important;
       gap: 12px !important;
     }
+
     #unity-container.landscape-mode .left-column {
       width: 235px !important;
       flex: 0 0 235px !important;
     }
+
     #unity-container.landscape-mode .right-column {
       width: 235px !important;
       flex: 0 0 235px !important;
     }
+
     #unity-container.landscape-mode .info-card {
       flex: none !important;
       padding: 10px 14px !important;
@@ -180,23 +200,28 @@
       box-sizing: border-box !important;
       width: 100% !important;
     }
+
     #unity-container.landscape-mode #details-row .info-card {
       flex: 1 1 33% !important;
       width: auto !important;
     }
+
     #unity-container.landscape-mode .card-title {
       font-size: 13px !important;
       letter-spacing: 0.04em !important;
     }
+
     #unity-container.landscape-mode .card-description,
     #unity-container.landscape-mode .resp-item,
     #unity-container.landscape-mode .spec-val {
       font-size: 12.5px !important;
       line-height: 1.45 !important;
     }
+
     #unity-container.landscape-mode .spec-label {
       font-size: 9px !important;
     }
+
     #unity-container.landscape-mode .tech-chip {
       font-size: 11.5px !important;
       padding: 6px 12px !important;
@@ -204,40 +229,46 @@
       width: 100% !important;
       box-sizing: border-box !important;
     }
+
     #unity-container.landscape-mode .tech-container {
       display: flex !important;
       flex-direction: column !important;
       gap: 6px !important;
       width: 100% !important;
     }
+
     #unity-container.landscape-mode .specs-grid {
       display: grid !important;
       grid-template-columns: 1fr !important;
       gap: 12px !important;
     }
+
     #unity-container.landscape-mode .spec-item {
       padding: 2px 4px !important;
       gap: 10px !important;
     }
-    
-    
+
+
     #unity-container.landscape-mode .game-details-column {
       display: none !important;
     }
+
     #unity-container.landscape-mode #unity-canvas {
       max-width: 90vw !important;
       max-height: 90vh !important;
     }
-                        
-    
+
+
     /* Hide sidebars on narrow screens for responsiveness */
     @media (max-width: 1200px) {
+
       .game-details-column,
       #unity-container.landscape-mode .game-details-column,
       #details-row,
       #unity-container.landscape-mode #details-row {
         display: none !important;
       }
+
       #unity-container,
       #unity-container.landscape-mode {
         flex-direction: column !important;
@@ -246,12 +277,14 @@
         height: 100vh !important;
         padding: 8px !important;
       }
+
       #unity-canvas,
       #unity-canvas.landscape-mode {
         max-height: 92vh !important;
         max-width: 95vw !important;
         width: auto !important;
         height: auto !important;
+        margin-top: -30px !important;
       }
     }
 
@@ -265,9 +298,11 @@
       text-transform: uppercase;
       font-family: 'Outfit', sans-serif !important;
     }
+
     .card-title-bar {
       padding-left: 14px;
     }
+
     .card-title-bar::before {
       content: "";
       position: absolute;
@@ -276,14 +311,16 @@
       bottom: 1px;
       width: 4px;
       border-radius: 2px;
-      background: #F97316; /* Orange vertical highlight bar */
+      background: #F97316;
+      /* Orange vertical highlight bar */
     }
-    
+
     .spec-item {
       display: flex;
       align-items: center;
       gap: 16px;
     }
+
     .spec-icon-wrapper {
       width: 42px;
       height: 42px;
@@ -296,15 +333,18 @@
       border: 1px solid rgba(249, 115, 22, 0.15);
       color: #F97316;
     }
+
     .spec-icon {
       width: 20px;
       height: 20px;
     }
+
     .spec-text {
       display: flex;
       flex-direction: column;
       min-width: 0;
     }
+
     .spec-label {
       font-size: 10px;
       color: #64748B;
@@ -313,8 +353,9 @@
       margin-bottom: 2px;
       text-transform: uppercase;
     }
+
     .spec-val {
-      font-size: 15px;
+      font-size:  12.5px;
       color: #F8FAFC;
       font-weight: 700;
       line-height: 1.4;
@@ -323,19 +364,22 @@
       word-break: break-word !important;
       white-space: normal !important;
     }
+
     .specs-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
+
     .tech-container {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .tech-chip {
-      font-size: 13px;
-      padding: 8px 14px;
+      font-size:  11px;
+      padding:  5px 10px;
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -346,6 +390,7 @@
       word-break: break-word !important;
       white-space: normal !important;
     }
+
     .card-description {
       font-size: 14px;
       color: #94A3B8;
@@ -354,6 +399,7 @@
       font-weight: 500;
       font-family: 'Outfit', sans-serif !important;
     }
+
     .resp-list {
       margin: 0;
       padding-left: 20px;
@@ -363,15 +409,18 @@
       font-weight: 500;
       font-family: 'Outfit', sans-serif !important;
     }
+
     .resp-item {
       margin-bottom: 8px;
     }
+
     .resp-item:last-child {
       margin-bottom: 0;
     }
 
     /* Rotate Warning Styles */
-    #rotate-warning-landscape, #rotate-warning-portrait {
+    #rotate-warning-landscape,
+    #rotate-warning-portrait {
       display: none;
       position: fixed;
       inset: 0;
@@ -385,6 +434,7 @@
       color: #FFFFFF;
       font-family: 'Outfit', sans-serif !important;
     }
+
     .rotate-warning-box {
       max-width: 320px;
       display: flex;
@@ -392,10 +442,12 @@
       align-items: center;
       gap: 16px;
     }
+
     .rotate-icon {
       font-size: 48px;
       animation: rotate-anim 2s infinite ease-in-out;
     }
+
     .rotate-title {
       font-size: 20px;
       font-weight: 800;
@@ -404,6 +456,7 @@
       letter-spacing: 0.05em;
       color: #F97316;
     }
+
     .rotate-desc {
       font-size: 13px;
       color: #94A3B8;
@@ -411,113 +464,155 @@
       margin: 0;
       font-weight: 500;
     }
+
     @keyframes rotate-anim {
-      0% { transform: rotate(0deg); }
-      50% { transform: rotate(-90deg); }
-      100% { transform: rotate(0deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(-90deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
     }
-    
+
     /* Only trigger rotate alerts on mobile-sized viewports to keep desktop scaling clean */
     @media (max-width: 950px) and (orientation: portrait) {
-      #unity-container.landscape-mode ~ #rotate-warning-landscape {
+      #unity-container.landscape-mode~#rotate-warning-landscape {
         display: flex !important;
       }
     }
+
     @media (max-width: 950px) and (orientation: landscape) {
-      #unity-container:not(.landscape-mode) ~ #rotate-warning-portrait {
+      #unity-container:not(.landscape-mode)~#rotate-warning-portrait {
         display: flex !important;
       }
     }
   </style>
 </head>
+
 <body>
   <div id="unity-container" class="unity-desktop">
     <div id="gameplay-row">
-      
-    <div class="game-details-column left-column">
-      <!-- Card 1: Project Specifications -->
-      <div class="info-card">
-        <h2 class="card-title card-title-bar">PROJECT SPECIFICATIONS</h2>
-        
-        <div class="specs-grid">
-          <div class="spec-item">
-            <div class="spec-icon-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="spec-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" /></svg>
+
+      <div class="game-details-column left-column">
+        <!-- Card 1: Project Specifications -->
+        <div class="info-card">
+          <h2 class="card-title card-title-bar">PROJECT SPECIFICATIONS</h2>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <div class="spec-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="spec-icon">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
+                </svg>
+              </div>
+              <div class="spec-text">
+                <span class="spec-label">GAME ENGINE</span>
+                <span class="spec-val">Unity 6000.0.68f1 LTS (URP)</span>
+              </div>
             </div>
-            <div class="spec-text">
-              <span class="spec-label">GAME ENGINE</span>
-              <span class="spec-val">Unity 2022.3 LTS (URP)</span>
+
+            <div class="spec-item">
+              <div class="spec-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="spec-icon">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6.429 9.75 2.25 12l4.179 2.25m11.142 0L21.75 12l-4.179-2.25M12 5.75 6.429 9.75 12 13.75l5.571-4-5.571-4Zm0 8-5.571 4L12 21.75l5.571-4-5.571-4Z" />
+                </svg>
+              </div>
+              <div class="spec-text">
+                <span class="spec-label">TARGET PLATFORMS</span>
+                <span class="spec-val">3D, Casual</span>
+              </div>
             </div>
-          </div>
-          
-          <div class="spec-item">
-            <div class="spec-icon-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="spec-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m11.142 0L21.75 12l-4.179-2.25M12 5.75 6.429 9.75 12 13.75l5.571-4-5.571-4Zm0 8-5.571 4L12 21.75l5.571-4-5.571-4Z" /></svg>
+
+            <div class="spec-item">
+              <div class="spec-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="spec-icon">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-6.75a1.125 1.125 0 0 0-1.125 1.125v3.375m9 0ZM9 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+              </div>
+              <div class="spec-text">
+                <span class="spec-label">GENRE</span>
+                <span class="spec-val">Casual</span>
+              </div>
             </div>
-            <div class="spec-text">
-              <span class="spec-label">TARGET PLATFORMS</span>
-              <span class="spec-val">3D, Casual</span>
-            </div>
-          </div>
-          
-          <div class="spec-item">
-            <div class="spec-icon-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="spec-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-6.75a1.125 1.125 0 0 0-1.125 1.125v3.375m9 0ZM9 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg>
-            </div>
-            <div class="spec-text">
-              <span class="spec-label">GENRE</span>
-              <span class="spec-val">Casual</span>
-            </div>
-          </div>
-          
-          <div class="spec-item">
-            <div class="spec-icon-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="spec-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
-            </div>
-            <div class="spec-text">
-              <span class="spec-label">DURATION</span>
-              <span class="spec-val">2 Months</span>
+
+            <div class="spec-item">
+              <div class="spec-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="spec-icon">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                </svg>
+              </div>
+              <div class="spec-text">
+                <span class="spec-label">DURATION</span>
+                <span class="spec-val">2 Months</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <!-- Card 2: Technologies -->
-      <div class="info-card">
-        <h3 class="card-title card-title-bar">TECHNOLOGIES</h3>
-        <div class="tech-container">
-          <span class="tech-chip">C#</span><span class="tech-chip">Unity 3D Engine</span><span class="tech-chip">Post Processing Stack</span><span class="tech-chip">Google Play Games Services</span><span class="tech-chip">Custom Particle Systems</span><span class="tech-chip">Mesh Deformer API</span>
+
+        <!-- Card 2: Technologies -->
+        <div class="info-card">
+          <h3 class="card-title card-title-bar">TECHNOLOGIES</h3>
+          <div class="tech-container">
+            <span class="tech-chip">C#</span><span class="tech-chip">Unity 3D Engine</span><span class="tech-chip">Post
+              Processing Stack</span><span class="tech-chip">Google Play Games Services</span><span
+              class="tech-chip">Custom Particle Systems</span><span class="tech-chip">Mesh Deformer API</span><span class="tech-chip">Admob SDK</span><span class="tech-chip">Unity Ads SDK</span><span class="tech-chip">Unity Analytics</span><span class="tech-chip">In App Purchase SDK</span>
+          </div>
         </div>
-      </div>
-    </div>
-                        
-      <canvas id="unity-canvas" width=500 height=800 tabindex="-1"></canvas>
-      
-    <div class="game-details-column right-column">
-      <!-- Card 3: The Challenge -->
-      <div class="info-card">
-        <h2 class="card-title card-title-bar challenge-title">THE CHALLENGE</h2>
-        <p class="card-description">Hypercasual games like Stack Ball require highly responsive inputs and instantaneous visual feedback.</p>
-      </div>
-      
-      <!-- Card 4: The Solution -->
-      <div class="info-card">
-        <h2 class="card-title card-title-bar solution-title">THE SOLUTION</h2>
-        <p class="card-description">We resolved the fragmentation bottleneck by pre-generating mesh shards and using a pool of reusable active pieces with standard...</p>
+
+        <!-- Card: Controls -->
+        <div class="info-card">
+          <h3 class="card-title card-title-bar">CONTROLS</h3>
+          <div class="tech-container">
+            <ul class="resp-list">
+              <li class="resp-item" style="color: #F97316;">Use mouse button to play.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <!-- Card 5: My Responsibilities -->
-      <div class="info-card">
-        <h2 class="card-title card-title-bar responsibilities-title">MY RESPONSIBILITIES</h2>
-        <ul class="resp-list">
-          <li class="resp-item">Programmed the revolving 3D stack mechanics and continuous collision check...</li><li class="resp-item">Developed the platform fragmentation physics, spawning dynamic kinematic mesh...</li>
-        </ul>
+      <canvas id="unity-canvas" width=500 height=800 tabindex="-1"></canvas>
+
+      <div class="game-details-column right-column">
+        <!-- Card 3: The Challenge -->
+        <div class="info-card">
+          <h2 class="card-title card-title-bar challenge-title">THE CHALLENGE</h2>
+          <p class="card-description">Hypercasual games like Stack Ball require highly responsive inputs and
+            instantaneous visual feedback.</p>
+        </div>
+
+        <!-- Card 4: The Solution -->
+        <div class="info-card">
+          <h2 class="card-title card-title-bar solution-title">THE SOLUTION</h2>
+          <p class="card-description">We resolved the fragmentation bottleneck by pre-generating mesh shards and using a
+            pool of reusable active pieces with standard...</p>
+        </div>
+
+        <!-- Card 5: My Responsibilities -->
+        <div class="info-card">
+          <h2 class="card-title card-title-bar responsibilities-title">MY RESPONSIBILITIES</h2>
+          <ul class="resp-list">
+            <li class="resp-item">Programmed the revolving 3D stack mechanics and continuous collision check...</li>
+            <li class="resp-item">Developed the platform fragmentation physics, spawning dynamic kinematic mesh...</li>
+          </ul>
+        </div>
       </div>
-    </div>
-                        
+
     </div>
     <div id="details-row">
-      
+
     </div>
     <div id="unity-loading-bar">
       <div id="unity-logo"></div>
@@ -550,13 +645,13 @@
       console.log("WebGL orientation received:", orientation, "Explicit:", !!isExplicit);
       var container = document.querySelector("#unity-container");
       if (!canvas || !container) return;
-      
+
       if (isExplicit) {
         hasExplicitOrientation = true;
       }
-      
+
       var isLandscape = false;
-      
+
       if (orientation) {
         var orientLower = orientation.toLowerCase();
         if (orientLower.includes("landscape")) {
@@ -565,7 +660,7 @@
           isLandscape = false;
         }
       }
-      
+
       if (isLandscape) {
         canvas.classList.add("landscape-mode");
         container.classList.add("landscape-mode");
@@ -575,7 +670,7 @@
         container.classList.remove("landscape-mode");
         console.log("Canvas orientation set to Portrait");
       }
-      
+
       // Dispatch resize event so Unity engine detects the DOM size change instantly
       window.dispatchEvent(new Event('resize'));
     }
@@ -587,16 +682,16 @@
       if (screen.orientation) {
         var originalOrientation = screen.orientation;
         var mockOrientation = new Proxy(originalOrientation, {
-          get: function(target, prop) {
+          get: function (target, prop) {
             if (prop === 'lock') {
-              return function(orientation) {
+              return function (orientation) {
                 console.log("screen.orientation.lock intercepted:", orientation);
                 _applyOrientation(orientation, true);
                 return Promise.resolve(); // satisfy promise-based callers
               };
             }
             if (prop === 'unlock') {
-              return function() {
+              return function () {
                 console.log("screen.orientation.unlock intercepted");
                 _applyOrientation("Portrait", true);
               };
@@ -608,9 +703,9 @@
             return val;
           }
         });
-        
+
         Object.defineProperty(screen, 'orientation', {
-          get: function() {
+          get: function () {
             return mockOrientation;
           },
           configurable: true
@@ -622,12 +717,12 @@
     }
 
     try {
-      screen.lockOrientation = function(orientation) {
+      screen.lockOrientation = function (orientation) {
         console.log("screen.lockOrientation intercepted:", orientation);
         _applyOrientation(orientation, true);
         return true;
       };
-      screen.unlockOrientation = function() {
+      screen.unlockOrientation = function () {
         console.log("screen.unlockOrientation intercepted");
         _applyOrientation("Portrait", true);
         return true;
@@ -638,18 +733,18 @@
       screen.mozUnlockOrientation = screen.unlockOrientation;
       screen.msUnlockOrientation = screen.unlockOrientation;
       screen.webkitUnlockOrientation = screen.unlockOrientation;
-    } catch (e) {}
+    } catch (e) { }
 
     // Expose direct C# call hooks to the original _applyOrientation method to prevent recursive naming collisions
-    window.onOrientationChanged = function(o) { _applyOrientation(o, true); };
-    window.SetOrientation = function(o) { _applyOrientation(o, true); };
-    window.setOrientation = function(o) { _applyOrientation(o, true); };
-    window.ChangeOrientation = function(o) { _applyOrientation(o, true); };
-    window.changeOrientation = function(o) { _applyOrientation(o, true); };
-    window.setScreenOrientation = function(o) { _applyOrientation(o, true); };
+    window.onOrientationChanged = function (o) { _applyOrientation(o, true); };
+    window.SetOrientation = function (o) { _applyOrientation(o, true); };
+    window.setOrientation = function (o) { _applyOrientation(o, true); };
+    window.ChangeOrientation = function (o) { _applyOrientation(o, true); };
+    window.changeOrientation = function (o) { _applyOrientation(o, true); };
+    window.setScreenOrientation = function (o) { _applyOrientation(o, true); };
 
     // Listen to iframe postMessage events
-    window.addEventListener("message", function(event) {
+    window.addEventListener("message", function (event) {
       if (event.data) {
         if (typeof event.data === 'string') {
           if (event.data.toLowerCase().includes('landscape') || event.data.toLowerCase().includes('portrait')) {
@@ -663,13 +758,13 @@
 
     // Capture console.log strings containing orientation updates
     var originalLog = console.log;
-    console.log = function() {
+    console.log = function () {
       originalLog.apply(console, arguments);
       for (var i = 0; i < arguments.length; i++) {
         var arg = arguments[i];
         if (typeof arg === 'string') {
           var argLower = arg.toLowerCase();
-          
+
           // 1. Orientation triggers
           if (argLower.includes('orientation:') || argLower.includes('screenorientation') || argLower.includes('setorientation')) {
             var parts = arg.split(':');
@@ -681,12 +776,12 @@
     };
 
     // Watch for width/height/style attribute mutations from the Unity engine
-    var observer = new MutationObserver(function(mutations) {
+    var observer = new MutationObserver(function (mutations) {
       return; // Locked orientation at compilation time
 
       var w = parseInt(canvas.getAttribute('width'), 10) || canvas.width;
       var h = parseInt(canvas.getAttribute('height'), 10) || canvas.height;
-      
+
       // Also check inline style bounds if Emscripten overwrote them
       if (canvas.style.width && canvas.style.width.indexOf('px') !== -1) {
         w = parseInt(canvas.style.width, 10);
@@ -694,7 +789,7 @@
       if (canvas.style.height && canvas.style.height.indexOf('px') !== -1) {
         h = parseInt(canvas.style.height, 10);
       }
-      
+
       if (w > h) {
         if (!canvas.classList.contains("landscape-mode")) {
           _applyOrientation("Landscape", false);
@@ -769,4 +864,5 @@
     document.body.appendChild(script);
   </script>
 </body>
+
 </html>

@@ -50,7 +50,12 @@ export default function ProjectCard({ project, onViewDetails }: ProjectCardProps
       onMouseEnter={playHover}
       onClick={() => {
         playClick();
-        onViewDetails(project);
+        if (project.id === "14" && project.webglUrl) {
+          window.open(project.webglUrl, "_blank", "noopener,noreferrer");
+          unlockAchievement("webgl");
+        } else {
+          onViewDetails(project);
+        }
       }}
       className="relative h-[420px] rounded-2xl overflow-hidden border border-slate-800/80 hover:border-neon-orange/30 hover:shadow-lg hover:shadow-neon-orange/5 bg-slate-950 flex flex-col justify-end pt-6 px-6 pb-7 sm:pb-6 group cursor-pointer transition-all duration-300 hologram-card"
     >
@@ -62,13 +67,13 @@ export default function ProjectCard({ project, onViewDetails }: ProjectCardProps
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
       </motion.div>
-
+ 
       {/* Dark Gradient Overlay */}
       <motion.div
         variants={overlayVariants}
         className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/20 z-10"
       />
-
+ 
       {/* Content Container */}
       <div className="relative z-20 w-full flex flex-col">
         {/* Project Meta Badges */}
@@ -88,32 +93,34 @@ export default function ProjectCard({ project, onViewDetails }: ProjectCardProps
             </span>
           ))}
         </motion.div>
-
+ 
         {/* Project Title */}
         <h3 className="text-[21.4px] sm:text-xl font-bold text-white tracking-wide leading-tight group-hover:text-indigo-200 transition-colors duration-300 mb-2">
           {project.title}
         </h3>
-
-
-
+ 
+ 
+ 
         {/* Action Buttons (slide upward on hover) */}
         <motion.div
           variants={buttonsVariants}
           className="flex gap-2.5 w-full mt-1 max-sm:!opacity-100 max-sm:!translate-y-0"
         >
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              playClick();
-              onViewDetails(project);
-            }}
-            onMouseEnter={playHover}
-            className="flex-1 flex items-center justify-center gap-1.5 bg-[#0c1e3f] hover:bg-[#122b5c] text-white text-[12.8px] sm:text-xs font-bold py-2.5 px-4 rounded-xl border border-blue-900 hover:border-blue-700 transition-all duration-150 active:scale-95 cursor-pointer"
-          >
-            <Info size={14} />
-            Know More
-          </button>
-
+          {project.id !== "14" && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                playClick();
+                onViewDetails(project);
+              }}
+              onMouseEnter={playHover}
+              className="flex-1 flex items-center justify-center gap-1.5 bg-[#0c1e3f] hover:bg-[#122b5c] text-white text-[12.8px] sm:text-xs font-bold py-2.5 px-4 rounded-xl border border-blue-900 hover:border-blue-700 transition-all duration-150 active:scale-95 cursor-pointer"
+            >
+              <Info size={14} />
+              Know More
+            </button>
+          )}
+ 
           {project.webglUrl ? (
             <a
               href={project.webglUrl}
